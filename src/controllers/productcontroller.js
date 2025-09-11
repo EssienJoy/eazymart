@@ -63,18 +63,26 @@ const cartActionsController = async function (action, id) {
     let updatedCart;
     let totalPrice;
 
-    if (action === 'delete') updatedCart = model.deleteFromCart(id);
-    if (action === 'clear') updatedCart = model.clearCart();
+    if (action === 'delete') {
+        const result = model.updateCartQuantity(id, action);
+        updatedCart = model.deleteFromCart(id);
+        totalPrice = result.total;
+    };
+
+    if (action === 'clear') {
+        const result = model.clearCart();
+        updatedCart = result.item;
+        totalPrice = result.total;
+    }
+
     if (action === 'increase' || action === 'decrease') {
         const result = model.updateCartQuantity(id, action);
         updatedCart = result.item ?? result;
         totalPrice = result.total ?? model.totalCartPrice();
     }
 
-
     cartview.renderCartProducts(updatedCart);
     cartview.priceMarkup(totalPrice);
-    cartview.priceMarkup(model.totalCartPrice());
 };
 
 // Init

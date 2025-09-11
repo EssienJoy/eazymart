@@ -17,7 +17,7 @@ const logUserInController = async function (userLoggedInData) {
         await model.authorizeUser();
 
         // Change url
-        window.location.href = '/src/pages/products.html';
+        window.location.href = 'products.html';
     } catch (err) {
         loginView.renderError(err.message);
     }

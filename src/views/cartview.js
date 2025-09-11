@@ -15,7 +15,6 @@ class CartView {
 
 
   renderCartProducts(cartProducts) {
-    console.log(cartProducts);
     if (!cartProducts.length) {
       this._parentElement.innerHTML = this._emptyCartMarkup();
       return;
@@ -111,7 +110,7 @@ class CartView {
     const markup = `
     <div class="flex justify-between text-lg font-semibold">
 							<p>Total:</p>
-							<p>$<span id="cart-total">${totalCost.toFixed(2) || 0}</span></p>
+							<p>$<span id="cart-total">${totalCost.toFixed(2)}</span></p>
 						</div>
             <button
 							class="px-2 clear-cart text-xl rounded-sm grid place-items-center hover:bg-red">

@@ -75,7 +75,7 @@ export const totalCartPrice = function () {
 };
 
 
-// Remove a product from cart
+// // Remove a product from cart
 export const deleteFromCart = function (id) {
     state.cartItem = state.cartItem.filter(item => item.id !== +id);
     return state.cartItem;
@@ -84,23 +84,30 @@ export const deleteFromCart = function (id) {
 // Clear the cart
 export const clearCart = function () {
     state.cartItem = [];
-    return state.cartItem;
+    state.total = 0;
+    return { item: state.cartItem, total: state.total };
 };
 
-// Update quantity (increase/decrease)
 export const updateCartQuantity = function (id, action) {
     const item = state.cartItem.find(prod => prod.id === +id);
     if (!item) return;
 
+    // Remove a cart
+    if (action === 'delete') {
+        state.total -= item.price * item.qty;
+
+    }
+
+    // increase qty
     if (action === 'increase') {
         item.qty++;
         state.total += item.price;
-        console.log(state.total);
     }
+
+    // decrease qty
     if (action === 'decrease') {
         item.qty--;
         state.total -= item.price;
-        console.log(state.total);
 
 
         if (item.qty <= 0) {
