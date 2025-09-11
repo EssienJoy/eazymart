@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Eazy Mart</title>
+		<link rel="stylesheet" href="../assets/output.css" />
+		<script type="module" src="../controllers/productcontroller.js"></script>
+	</head>
+	<body id="home">
+		<header class="border-b border-primary dark:border-cream border-solid">
+			<aside
+				class="flex p-1 justify-center bg-primary text-cream dark:text-slateblack dark:bg-lightbrown">
+				<p class="text-sm font-bold">50% off Summer Sales Ongoing</p>
+			</aside>
+
+			<!-- Navigation -->
+			<nav
+				class="flex items-center py-3 justify-between mx-auto px-[var(--spacing-main)] max-w-[var(--container-max-width)]">
+				<a class="font-bold text-xs sm:text-lg" href="/">Eazy Mart</a>
+
+				<div class="flex items-center space-x-3">
+					<div
+						class="grid place-items-center border-solid border-2 rounded-sm border-primary bg-primary cursor-pointer pt-1 pb-1 pl-3 pr-3 w-[80%] tablet:w-[60%]">
+						<form id="search-form" class="flex justify-between gap-3">
+							<input
+								id="query"
+								class="active:bg-transparent outline-none w-full bg-transparent text-cream text-sm md:text-lg"
+								type="search"
+								name="query"
+								placeholder="Look for your style..."
+								autocomplete="off" />
+							<button>
+								<svg
+									class="fill-primary stroke-cream"
+									width="20px"
+									height="20px"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg">
+									<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+									<g
+										id="SVGRepo_tracerCarrier"
+										stroke-linecap="round"
+										stroke-linejoin="round"></g>
+									<g id="SVGRepo_iconCarrier">
+										<path
+											opacity="0.1"
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M12 3C4.5885 3 3 4.5885 3 12C3 19.4115 4.5885 21 12 21C19.4115 21 21 19.4115 21 12C21 4.5885 19.4115 3 12 3ZM11.5 7.75C9.42893 7.75 7.75 9.42893 7.75 11.5C7.75 13.5711 9.42893 15.25 11.5 15.25C13.5711 15.25 15.25 13.5711 15.25 11.5C15.25 9.42893 13.5711 7.75 11.5 7.75Z"
+											fill="#323232"></path>
+										<path
+											d="M3 12C3 4.5885 4.5885 3 12 3C19.4115 3 21 4.5885 21 12C21 19.4115 19.4115 21 12 21C4.5885 21 3 19.4115 3 12Z"
+											stroke-width="2"></path>
+										<path
+											d="M14 14L16 16"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"></path>
+										<path
+											d="M15 11.5C15 13.433 13.433 15 11.5 15C9.567 15 8 13.433 8 11.5C8 9.567 9.567 8 11.5 8C13.433 8 15 9.567 15 11.5Z"
+											stroke-width="2"></path>
+									</g>
+								</svg>
+							</button>
+						</form>
+					</div>
+
+					<div class="flex gap-2">
+						<button class="bg-transparent open-cart-btn">
+							<svg
+								class="fill-primary dark:fill-cream w-6"
+								viewBox="0 0 30 30"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M21.25 22.5C21.913 22.5 22.5489 22.7634 23.0178 23.2322C23.4866 23.7011 23.75 24.337 23.75 25C23.75 25.663 23.4866 26.2989 23.0178 26.7678C22.5489 27.2366 21.913 27.5 21.25 27.5C20.587 27.5 19.9511 27.2366 19.4822 26.7678C19.0134 26.2989 18.75 25.663 18.75 25C18.75 23.6125 19.8625 22.5 21.25 22.5ZM1.25 2.5H5.3375L6.5125 5H25C25.3315 5 25.6495 5.1317 25.8839 5.36612C26.1183 5.60054 26.25 5.91848 26.25 6.25C26.25 6.4625 26.1875 6.675 26.1 6.875L21.625 14.9625C21.2 15.725 20.375 16.25 19.4375 16.25H10.125L9 18.2875L8.9625 18.4375C8.9625 18.5204 8.99542 18.5999 9.05403 18.6585C9.11263 18.7171 9.19212 18.75 9.275 18.75H23.75V21.25H8.75C8.08696 21.25 7.45107 20.9866 6.98223 20.5178C6.51339 20.0489 6.25 19.413 6.25 18.75C6.25 18.3125 6.3625 17.9 6.55 17.55L8.25 14.4875L3.75 5H1.25V2.5ZM8.75 22.5C9.41304 22.5 10.0489 22.7634 10.5178 23.2322C10.9866 23.7011 11.25 24.337 11.25 25C11.25 25.663 10.9866 26.2989 10.5178 26.7678C10.0489 27.2366 9.41304 27.5 8.75 27.5C8.08696 27.5 7.45107 27.2366 6.98223 26.7678C6.51339 26.2989 6.25 25.663 6.25 25C6.25 23.6125 7.3625 22.5 8.75 22.5ZM20 13.75L23.475 7.5H7.675L10.625 13.75H20Z" />
+							</svg>
+						</button>
+
+						<svg
+							class="profile fill-primary dark:fill-cream stroke-primary dark:stroke-cream w-6"
+							viewBox="0 0 30 30"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5 22.5C5 21.1739 5.52678 19.9021 6.46447 18.9645C7.40215 18.0268 8.67392 17.5 10 17.5H20C21.3261 17.5 22.5979 18.0268 23.5355 18.9645C24.4732 19.9021 25 21.1739 25 22.5C25 23.163 24.7366 23.7989 24.2678 24.2678C23.7989 24.7366 23.163 25 22.5 25H7.5C6.83696 25 6.20107 24.7366 5.73223 24.2678C5.26339 23.7989 5 23.163 5 22.5Z"
+								stroke-width="2.5"
+								stroke-linejoin="round" />
+							<path
+								d="M15 12.5C17.0711 12.5 18.75 10.8211 18.75 8.75C18.75 6.67893 17.0711 5 15 5C12.9289 5 11.25 6.67893 11.25 8.75C11.25 10.8211 12.9289 12.5 15 12.5Z"
+								stroke-width="2.5" />
+						</svg>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main class="product">
+			<section
+				class="login-popup hidemodal flex flex-col items-center gap-6 dark:bg-slateblack bg-cream text-primary dark:text-cream">
+				<h2 class="text-lg message">Please log in to get started</h2>
+
+				<a
+					href="../pages/login.html"
+					class="bg-primary p-3 rounded-lg btn dark:bg-cream dark:text-primary">
+					Next step &rarr;
+				</a>
+			</section>
+			<div class="overlay hidemodal"></div>
+
+			<section
+				class="flex object-bottom gap-10 mx-auto px-[var(--spacing-main)] max-w-[var(--container-max-width)]">
+				<aside
+					class="w-[30%] border-r-1 border-primary py-10 dark:border-cream border-solid hidden sm:grid place-items-center">
+					<ul class="font-bold flex flex-col justify-around gap-4 pr-3">
+						<li><a href="#">Women's Clothing</a></li>
+						<li><a href="#">Men's Clothing</a></li>
+						<li><a href="#">Jeweleries</a></li>
+						<li><a href="#">Shoes</a></li>
+						<li><a href="#">Luxury Bags for Women</a></li>
+						<li><a href="#">Luxury Bags for Men</a></li>
+					</ul>
+				</aside>
+
+				<section
+					class="background-gradient w-full sm:w-[60%] self-center text-cream flex justify-center my-5">
+					<div
+						class="flex gap-4 flex-col justify-center w-[70%] sm:w-1/2 py-15">
+						<h2 class="text-cream font-semibold text-left text-2xl sm:text-3xl">
+							Moderne, Class, Chic, Style with a free Delivery on your first
+							order
+						</h2>
+					</div>
+				</section>
+			</section>
+
+			<div class="my-6">
+				<section
+					class="products-grid grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6 mx-auto px-[var(--spacing-main)] max-w-[var(--container-max-width)]"></section>
+
+				<section
+					class="py-10 flex justify-center gap-3 button-pagination mx-auto px-[var(--spacing-main)] max-w-[var(--container-max-width)]"></section>
+			</div>
+
+			<section
+				class="cart-section mx-auto px-[var(--spacing-main)] max-w-[var(--container-max-width)] transform translate-x-full transition-transform duration-500 ease-in-out flex fixed top-0 right-0 bg-cream dark:bg-slateblack text-primary dark:text-cream w-full sm:w-[30rem] h-[100dvh] p-5 shadow-lg z-50 overflow-hidden flex-col">
+				<div
+					class="flex justify-between border-b border-primary dark:border-cream pb-2">
+					<p class="text-sm sm:text-lg font-semibold">
+						Shopping Bag (<span id="cart-count">0</span>)
+					</p>
+					<button class="px-2 rounded-sm close-cart-btn">&#10006;</button>
+				</div>
+
+				<ul
+					class="addtocart-items-container flex-1 overflow-y-scroll py-4 space-y-4 scroll">
+					<li
+						class="flex flex-col items-center justify-center text-center gap-2">
+						<p class="text-lg font-semibold">Your Cart is Empty</p>
+
+						<svg
+							class="fill-primary dark:fill-cream"
+							width="124"
+							height="124"
+							viewBox="0 0 124 124"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M107.239 27.6158C106.754 27.0561 106.154 26.6072 105.48 26.2996C104.806 25.9921 104.074 25.8331 103.333 25.8333H31.9352L30.9277 19.8193C30.7271 18.6129 30.1051 17.5167 29.1723 16.7258C28.2394 15.9349 27.0563 15.5006 25.8333 15.5H14.2083C12.838 15.5 11.5239 16.0443 10.5549 17.0133C9.586 17.9822 9.04166 19.2964 9.04166 20.6667C9.04166 22.037 9.586 23.3511 10.5549 24.3201C11.5239 25.289 12.838 25.8333 14.2083 25.8333H21.4572L31.0672 83.514L31.2997 84.1547L31.5787 84.9348L32.1987 85.8597L32.6895 86.4383L33.6867 87.11L34.2653 87.4458C34.8673 87.6933 35.5107 87.8248 36.1615 87.8333H93C94.3703 87.8333 95.6844 87.289 96.6534 86.3201C97.6223 85.3511 98.1667 84.037 98.1667 82.6667C98.1667 81.2964 97.6223 79.9822 96.6534 79.0133C95.6844 78.0443 94.3703 77.5 93 77.5H40.5428L39.6852 72.3333H98.1667C99.41 72.3335 100.612 71.8853 101.551 71.0711C102.491 70.2568 103.105 69.131 103.282 67.9003L108.448 31.7337C108.554 31.0007 108.5 30.2537 108.292 29.5433C108.083 28.8328 107.724 28.1755 107.239 27.6158ZM97.3762 36.1667L95.9037 46.5H77.5V36.1667H97.3762ZM72.3333 36.1667V46.5H56.8333V36.1667H72.3333ZM72.3333 51.6667V62H56.8333V51.6667H72.3333ZM51.6667 36.1667V46.5H36.1667L35.402 46.655L33.6557 36.1667H51.6667ZM36.239 51.6667H51.6667V62H37.9595L36.239 51.6667ZM77.5 62V51.6667H95.1597L93.6871 62H77.5Z" />
+							<path
+								d="M43.9167 108.5C48.1969 108.5 51.6667 105.03 51.6667 100.75C51.6667 96.4698 48.1969 93 43.9167 93C39.6364 93 36.1667 96.4698 36.1667 100.75C36.1667 105.03 39.6364 108.5 43.9167 108.5Z" />
+							<path
+								d="M90.4167 108.5C94.6969 108.5 98.1667 105.03 98.1667 100.75C98.1667 96.4698 94.6969 93 90.4167 93C86.1365 93 82.6667 96.4698 82.6667 100.75C82.6667 105.03 86.1365 108.5 90.4167 108.5Z" />
+						</svg>
+
+						<a
+							href="#home"
+							class="mt-4 px-4 py-2 bg-primary dark:bg-lightbrown rounded-sm flex items-center gap-2">
+							<p class="font-bold dark:text-slateblack text-cream">
+								Go to Shop
+							</p>
+							<svg
+								class="fill-cream dark:fill-slateblack"
+								width="10"
+								height="19"
+								viewBox="0 0 10 19"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M2.04332 5.20895L2.92749 4.36978L7.74332 8.94324C7.82095 9.01652 7.88256 9.10366 7.9246 9.19965C7.96664 9.29564 7.98828 9.39858 7.98828 9.50255C7.98828 9.60652 7.96664 9.70946 7.9246 9.80545C7.88256 9.90144 7.82095 9.98858 7.74332 10.0619L2.92749 14.6377L2.04416 13.7985L6.56416 9.50374L2.04332 5.20895Z" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+
+				<div class="border-t border-primary dark:border-cream space-y-3 pt-4">
+					<div class="flex justify-between font-semibold price-cart-container">
+						<div class="flex justify-between text-sm sm:text-lg font-semibold">
+							<p>Total:</p>
+							<p>$<span id="cart-total">0</span></p>
+						</div>
+
+						<button
+							class="px-2 bg-primary dark:bg-lightbrown clear-cart text-xl rounded-sm grid place-items-center hover:bg-red">
+							<svg
+								class="fill-cream"
+								height="25px"
+								width="25px"
+								version="1.1"
+								id="Capa_1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 370 370"
+								xml:space="preserve">
+								<title>clear all cart items</title>
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g
+									id="SVGRepo_tracerCarrier"
+									stroke-linecap="round"
+									stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<g>
+										<path
+											d="M366.85,71.242c-2.842-3.661-7.216-5.802-11.85-5.802H97.836L87.698,37.929c-2.173-5.896-7.791-9.813-14.075-9.813H15 c-8.284,0-15,6.716-15,15c0,8.284,6.716,15,15,15h48.165l85.384,231.704c2.173,5.897,7.791,9.814,14.075,9.814h147.823 c8.284,0,15-6.716,15-15c0-8.284-6.716-15-15-15H173.082l-13.572-36.829h160.319c6.852,0,12.832-4.642,14.531-11.279L369.531,84.16 C370.681,79.671,369.69,74.902,366.85,71.242z M257.856,162.727c5.858,5.858,5.858,15.355,0,21.213 c-2.929,2.929-6.768,4.393-10.606,4.393s-7.678-1.464-10.606-4.393L223,170.296l-13.644,13.644 c-2.929,2.929-6.768,4.393-10.606,4.393s-7.678-1.464-10.606-4.393c-5.858-5.858-5.858-15.355,0-21.213l13.643-13.644 l-13.643-13.643c-5.858-5.858-5.858-15.355,0-21.213c5.857-5.858,15.355-5.858,21.213,0L223,127.87l13.644-13.644 c5.857-5.858,15.355-5.858,21.213,0c5.858,5.858,5.858,15.355,0,21.213l-13.644,13.643L257.856,162.727z"></path>
+										<path
+											d="M181.482,303.196c-10.687,0-19.347,8.658-19.347,19.344c0,10.686,8.66,19.344,19.347,19.344 c10.686,0,19.347-8.659,19.347-19.344C200.829,311.854,192.169,303.196,181.482,303.196z"></path>
+										<path
+											d="M282.311,303.196c-10.686,0-19.347,8.658-19.347,19.344c0,10.686,8.66,19.344,19.347,19.344s19.342-8.659,19.342-19.344 C301.653,311.854,292.998,303.196,282.311,303.196z"></path>
+									</g>
+								</g>
+							</svg>
+						</button>
+					</div>
+
+					<button
+						class="bg-primary dark:bg-lightbrown dark:text-slateblack text-cream text-center w-full py-3 rounded-sm">
+						Checkout
+					</button>
+					<button
+						class="w-full text-primary dark:bg-lightbrown dark:text-slateblack border dark:border-cream border-primary py-3 text-center rounded-sm bg-transparent">
+						Return to Shop
+					</button>
+				</div>
+			</section>
+		</main>
+
+		<footer
+			class="bg-primary text-cream dark:text-slateblack pt-10 pb-10 dark:bg-lightbrown">
+			<div
+				class="flex flex-wrap gap-10 mx-auto px-[var(--spacing-main)] max-w-[var(--container-max-width)] justify-between">
+				<nav>
+					<h3 class="text-xl mb-3 font-bold" id="about">About Us</h3>
+					<ul>
+						<li><a href="">Store Location</a></li>
+						<li><a href="">Size Guide Women</a></li>
+						<li><a href="">Size Guide Men</a></li>
+						<li><a href="">Privacy Policy</a></li>
+					</ul>
+				</nav>
+
+				<nav>
+					<h3 class="text-xl mb-3 font-bold">Information</h3>
+					<ul>
+						<li><a href="">FAQs</a></li>
+						<li><a href="">Shipping & Delivery</a></li>
+						<li><a href="">Order Tracking</a></li>
+						<li><a href="">Refund & Return Policy</a></li>
+					</ul>
+				</nav>
+
+				<nav>
+					<h3 class="text-xl mb-3 font-bold" id="contact">Contact Us</h3>
+					<ul>
+						<li><a href="">Customer Service</a></li>
+						<li><a href="">Email</a></li>
+						<li><a href="">Instagram</a></li>
+						<li><a href="">Twitter</a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+	</body>
+</html>

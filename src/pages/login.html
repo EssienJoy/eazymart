@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Eazy Mart</title>
+
+		<link rel="stylesheet" href="../assets/output.css" />
+		<script type="module" src="/src/controllers/logincontroller.js"></script>
+	</head>
+	<body class="grid place-items-center">
+		<main
+			class="mx-auto h-[100dvh] px-[var(--spacing-main)] max-w-[var(--container-max-width)] text-primary dark:text-cream p-3">
+			<section
+				class="flex border-8 h-full border-primary dark:border-cream border-solid rounded-3xl gap-3">
+				<div
+					class="w-full self-center sm:self-auto md:w-1/2 flex flex-col justify-center gap-4 p-4 rounded-tl-2xl rounded-bl-2xl relative">
+					<h1 class="text-2xl font-bold">Eazy Mart</h1>
+
+					<p class="text-sm w-full desktop:w-[90%]">
+						Shop Fast, No Stress, Smooth Luxury to Your Door Steps
+					</p>
+
+					<form id="login-form" class="w-full max-w-sm text-sm">
+						<p class="font-semibold text-sm mb-3">Login or Sign Up</p>
+
+						<input
+							type="text"
+							name="username"
+							placeholder="username"
+							required
+							class="input w-full mb-4 p-3 dark:text-primary rounded bg-[#F9F6F3] border border-[#66481D] placeholder-[#66481D] focus:outline-none focus:ring-2 focus:ring-[#66481D]" />
+
+						<input
+							type="password"
+							name="password"
+							placeholder="Password"
+							required
+							class="input w-full mb-6 p-3 dark:text-primary rounded bg-[#F9F6F3] border border-[#66481D] placeholder-[#66481D] focus:outline-none focus:ring-2 focus:ring-[#66481D]" />
+						<div class="feedback text-sm mb-2"></div>
+
+						<div class="flex justify-between items-center">
+							<button
+								type="submit"
+								class="bg-primary dark:bg-cream text-cream dark:text-primary px-4 py-2 rounded">
+								Submit
+							</button>
+							<a href="account.html" class="text-sm underline" target="_blank"
+								>Create an account</a
+							>
+						</div>
+					</form>
+				</div>
+
+				<!-- Right Container -->
+				<div class="hidden md:block md:w-1/2 h-full">
+					<img
+						class="blur-img w-full h-full object-cover rounded-tr-2xl rounded-br-2xl object-bottom transition-opacity duration-200 opacity-30"
+						src="../assets/images/arrangement-with-basket-shoes1.jpg"
+						alt=""
+						data-blurimage="../assets/images/arrangement-with-basket-shoes.jpg"
+						loading="lazy" />
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
