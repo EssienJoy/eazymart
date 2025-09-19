@@ -14,7 +14,6 @@ export function slider() {
 
         slides.forEach((s, i) => {
             s.style.transform = `translateX(${100 * i}%)`;
-
         });
 
         btnright.addEventListener('click', function () {

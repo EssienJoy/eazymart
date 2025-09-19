@@ -137,7 +137,7 @@
 
 @font-face {
     font-family: 'fashion';
-    src: url('../assets/fonts/Quicksand-Regular.otf') format('opentype');
+    src: url('pages/assets/fonts/Quicksand-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
