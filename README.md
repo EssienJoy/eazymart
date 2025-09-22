@@ -8,7 +8,7 @@ Eazy mart is an ecommerce store built with Html,Tailwind Css and Javascript,with
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing] (#contributing)
+- [Contributing](#contributing)
 
 
 ##  About the Project
