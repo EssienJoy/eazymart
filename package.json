@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "postcss src/styles.css -o src/output.css --watch",
-		"build": "postcss src/styles.css -o src/output.css --minify"
+		"build": "postcss src/styles.css -o src/output.css"
 	},
 	"repository": {
 		"type": "git",
